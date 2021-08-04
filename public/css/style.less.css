@@ -1,0 +1,494 @@
+/*
+Theme Name: Themify Split Child
+Description: Child theme for Themify Split
+Author: Afixia, LLC
+Template: themify-split
+*/
+
+/* write custom css below */
+/*
+Orange: rgba(242, 101, 39, 1) OR #EE6639;
+*/
+
+/* ______________________________ VARIABLES ______________________________ */
+@import "less/variables.less";
+
+/* ______________________________ MIXINS ______________________________ */
+@import "less/mixins.less";
+
+/* ______________________________ FONTS ______________________________ */
+@font-face {
+  font-family: 'BellugaSolidWide';
+  src: url('/wp-content/fonts/3AABF7_0_0.eot');
+  src: url('/wp-content/fonts/3AABF7_0_0.eot?#iefix') format('embedded-opentype'),
+  url('/wp-content/fonts/3AABF7_0_0.woff2') format('woff2'),
+  url('/wp-content/fonts/3AABF7_0_0.woff') format('woff'),
+  url('/wp-content/fonts/3AABF7_0_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.script-font {
+  font-family: 'BellugaSolidWide';
+}
+
+/* ______________________________ TYPOGRAPHY ______________________________ */
+body {
+  font-family: "Montserrat";
+  font-weight: 300;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+  font-style: inherit;
+  text-transform: inherit;
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  em {
+    font-family: 'BellugaSolidWide';
+    font-weight: normal;
+    /*margin-right: 20px;*/
+    font-style: inherit;
+    font-size: 1.8em;
+  }
+}
+
+a {
+  color: @orange;
+}
+
+/* ______________________________ UNIVERSAL / GLOBAL / HELPERS ______________________________ */
+@import "less/helpers.less";
+
+/* ______________________________ HEADER ______________________________ */
+
+#headerwrap {
+  #header {
+    #site-logo {
+      margin-right: 65px;
+    }
+
+    #site-description {
+      display: none;
+    }
+
+    #menu-icon {
+      color: @orange;
+    }
+
+    @media screen and (max-width: 1200px) {
+      #mobile-menu {
+        background-color: black;
+      }
+
+      .mobile_menu_active {
+        .sidemenu {
+          background-color: black;
+        }
+      }
+    }
+
+    #mobile-menu {
+      #main-nav-wrap {
+        #main-nav {
+          li {
+            a {
+              text-transform: uppercase;
+              font-weight: 600;
+              font-size: 1.2em;
+
+              &:hover {
+                color: @orange;
+              }
+            }
+
+            &#menu-item-290 {
+              a {
+                background-image: url("/wp-content/uploads/2020/02/podcast-icon.png");
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                background-size: contain;
+                width: 14px;
+                height: 14px;
+                /*display: inline-block;*/
+                text-indent: -9999px;
+                @media screen and (max-width: @small-screen-size) {
+                  width: auto;
+                  height: auto;
+                }
+
+                &::after {
+                  border: none;
+                }
+
+                &:hover {
+                  &::after {
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .social-widget {
+        margin-right: 0;
+        /*.formkit-alert {
+          display: block;
+        }*/
+
+        .social-links {
+          .icon-medium, .icon-large {
+            a {
+              i {
+                font-size: 20px;
+                padding: 8px;
+                width: 20px;
+                height: 20px;
+              }
+
+              &:hover {
+                i {
+                  background-color: fade(@orange, 50%) !important;
+                }
+              }
+            }
+          }
+        }
+
+        /*.rss {
+          display: none;
+        }*/
+      }
+
+      /*#searchform-wrap {
+        display: none;
+      }*/
+    }
+  }
+}
+
+/* ______________________________ BUTTONS ______________________________ */
+.ui.orange, .ui.orange.nav, .ui.orange.nav ul, .ui.orange.separate > li, .ui.orange.module-tab .tab-nav li, .ui.orange.vertical .tab-nav, .ui.orange.module-accordion .accordion-title, .ui.orange.window .bar, .ui.orange.module-tab.panel .tab-nav {
+  background-color: @orange;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+  color: white;
+}
+
+.ui.orange > li.current_page_item > a, .ui.orange > li.current_page_item:hover > a, .ui.orange > li.current-menu-item > a, .ui.orange > li.current-menu-item:hover > a, .ui.orange.builder_button:hover, .ui.orange.nav > li a:hover, .ui.orange.module-accordion li:hover .accordion-title, .ui.orange.module-tab .tab-nav li:hover {
+  background-color: fade(@orange, 50%);
+  color: white;
+}
+
+.xlarge .ui.builder_button {
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+  font-size: 1.4em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.large .ui.builder_button {
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wp-block-button__link {
+  background-color: @orange;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  color: white;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 1.5% 4%;
+
+  &:hover {
+    /*background-color: fade(@orange, 50%);*/
+    background-color: black;
+    color: white;
+  }
+}
+
+/* ______________________________ PAGES ______________________________ */
+@import "less/home.less";
+@import "less/about-page.less";
+@import "less/tools-page.less";
+@import "less/services-page.less";
+@import "less/courses-page.less";
+@import "less/coaching-page.less";
+@import "less/workshop-page.less";
+@import "less/speaking-page.less";
+@import "less/community-page.less";
+@import "less/sidebar-pages.less";
+@import "less/blog-page.less";
+@import "less/single-page.less";
+
+/* ______________________________ WIDGETS ______________________________ */
+@import "less/be-carousel.less";
+
+
+/* ______________________________ BODY ______________________________ */
+
+#home-4 {
+  .home-4-left {
+    h2 {
+      font-size: 2.4em;
+      color: @orange;
+      margin-bottom: 50px;
+
+      em {
+        font-size: 1.6em;
+        position: absolute;
+        @media screen and (max-width: @medium-screen-size) {
+          display: inline-block;
+          position: inherit;
+        }
+        margin-top: 50px;
+        width: 300px;
+      }
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.5;
+    }
+  }
+
+  .home-4-right {
+    /*.tb-column-inner:first-of-type {
+      padding-top: 104px;
+    }*/
+
+    .tb-column-inner:first-child {
+      /*height: 100%;*/
+      /*height: calc(100% - 135px);*/
+      height: calc(100% - 104px);
+      position: absolute;
+      top: 0;
+      @media screen and (max-width: @small-screen-size) {
+        height: auto;
+        position: inherit;
+        top: inherit;
+      }
+
+      /*margin-top: -69px;*/
+      //margin-top: -7%;
+      //margin-top: 8%;
+      .tb-column-inner a {
+        height: 100%;
+        position: inherit;
+        margin-top: 0;
+      }
+    }
+
+    .tb-column-inner {
+
+      .module_subrow {
+        height: 50%;
+
+        .subrow_inner {
+          height: 100%;
+          @media screen and (max-width: @medium-screen-size) {
+            height: 50%;
+          }
+
+          .sub_column {
+            height: 100%;
+
+            .tb-column-inner {
+              height: 100%;
+
+              .module {
+                height: 100%;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #home-online-courses-circle-link, #home-online-courses-circle-link-2 {
+      .circle-link-style-mixin();
+
+      a {
+        background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-1.png");
+
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-1-hover.png");
+        }
+      }
+    }
+
+    #home-speaking-workshops-circle-link, #home-speaking-workshops-circle-link-2 {
+      .circle-link-style-mixin();
+
+      a {
+        background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-3.png");
+
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-3-hover.png");
+        }
+      }
+    }
+
+    #home-coaching-circle-link, #home-coaching-circle-link-2 {
+      .circle-link-style-mixin();
+
+      a {
+        background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-2.png");
+
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-2-hover.png");
+        }
+      }
+    }
+
+    #home-community-circle-link, #home-community-circle-link-2 {
+      .circle-link-style-mixin();
+
+      a {
+        background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-4.png");
+
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/home-4-row-circle-4-hover.png");
+        }
+      }
+    }
+  }
+}
+
+/* ______________________________ FOOTER ______________________________ */
+#pagewrap {
+  .home-6-left {
+    h2 {
+      font-size: 3.1em;
+
+      em {
+        font-size: 1.7em;
+        .solid-circle-mixin(@orange);
+        width: 2em;
+        height: 2em;
+        line-height: 2.4em;
+      }
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.5;
+      padding-left: 10%;
+    }
+
+    h3 {
+      margin-top: 2em;
+
+      em {
+        padding-top: 1em;
+        font-size: 2em;
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  .home-6-right {
+    .home-convertkit-form {
+      input, select {
+        border: 3px solid @blue;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        background-color: white;
+        width: 100%;
+        margin: 0 auto .6em auto;
+        height: 60px;
+        font-size: 1.5em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: .4em .8em;
+      }
+
+      .formkit-submit {
+        background: white;
+        border: 3px solid @orange;
+        border-radius: 50%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: @orange;
+        width: 9em;
+        height: 9em;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        font-weight: bold;
+        margin: 1em auto;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background: #fce3d8;
+          /*color: white;*/
+        }
+      }
+    }
+  }
+}
+
+#footerwrap {
+  text-align: center;
+  padding: 4em 0 2em 0;
+
+  .back-top {
+    a {
+      background: @orange;
+      top: -56px;
+      z-index: 20;
+      border-radius: 100% 100% 0 0;
+    }
+  }
+
+  a.footer-button {
+    display: inline-block;
+    background: white;
+    color: @orange;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 1.5% 4%;
+    font-size: 1.7em;
+    font-weight: bold;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .footer-text {
+    .one {
+      display: none;
+    }
+
+    .two {
+      float: none;
+      text-align: center;
+      font-size: 1.4em;
+    }
+  }
+}
+

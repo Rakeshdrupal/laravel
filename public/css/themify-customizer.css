@@ -1,0 +1,51 @@
+/* Themify Customize Styling */
+body {	
+	font-family: "Montserrat";	font-weight:300;
+ 
+}
+h1 {	
+	font-family: "Montserrat";	font-weight:600;
+ 
+}
+h2 {	
+	font-family: "Montserrat";	font-weight:600;
+ 
+}
+h3 {	
+	font-family: "Montserrat";	font-weight:600;
+ 
+}
+h4 {	
+	font-family: "Montserrat";	font-weight:600;
+ 
+}
+h5 {	
+	font-family: "Montserrat";	font-weight:600;
+ 
+}
+h6 {	
+	font-family: "Montserrat";	font-weight:600;
+ 
+}
+#headerwrap {	background: none;
+	background-color: #Fe5502;
+}
+body[class*="themify"] #site-logo a img {		width: 200px; 
+}
+body:not(.mobile_menu_active).transparent-header #main-nav a, #main-nav a {	
+	color: #fff; 
+}
+.social-link-item a i{background-color: #171717!important;}
+#footerwrap {	background: none;
+	background-color: #fe6500; 
+}
+@media screen and (max-width: 1024px) { /* Themify Customize Styling */
+body[class*="themify"] #site-logo a img {		width: 200px; 
+}
+ }@media screen and (max-width: 768px) { /* Themify Customize Styling */
+body[class*="themify"] #site-logo a img {		width: 200px; 
+}
+ }@media screen and (max-width: 480px) { /* Themify Customize Styling */
+body[class*="themify"] #site-logo a img {		width: 200px; 
+}
+ }
